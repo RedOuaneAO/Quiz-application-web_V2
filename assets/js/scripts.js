@@ -76,12 +76,11 @@ let score=0;
     submitBtn.addEventListener("click",()=>{
         index++;
         counter++;
-        console.log(index);
         submitBtn.style.visibility="hidden";
         if(index<Questions.length){
             clearInterval(counterTime);
             counterElement.innerHTML = 10;
-          
+        console.log(index);
             answerR.forEach(element=>{
                 let elementBtn =element.parentElement.parentElement;
                 if(element.checked==true){
@@ -98,8 +97,7 @@ let score=0;
                 element.checked=false;
             })
         }else {
-            setTimeout(Result,1500);
-            Result();            //to take me to the result form after last submit
+            setTimeout(Result,1500);     //to take me to the result form after last submit
         }
         next =setTimeout(displayQuestions,1500); // to wait for 1.5 s Before go to the next question
     });
@@ -149,7 +147,7 @@ function Result(){
     }else if(score>=50 && score<70){
         level.innerText="good";
 
-    }else if(score>=70){
+    }else if(score>70){
         level.innerText="perfect";
 
     }

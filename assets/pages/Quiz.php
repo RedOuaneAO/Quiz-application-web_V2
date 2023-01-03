@@ -1,4 +1,10 @@
 <?php
+// include '../classes/user.php';
+// include 'database.php';
+// echo $_SESSION['nameUser'];
+if(!isset($_SESSION['nameUser'])){
+    // header("location:login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,16 +55,18 @@
         <!-- quizForm -->
 
         <div id="quizId" class="hide">
-            <div id="TimerId">
-                <span>&#9203; 00</span><span>:</span><span id="timeCounter">10</span>
-            </div>
-            <div id="progBack" class="my-2">
-                <div id="progFront">
-                </div>
-            </div>
             <div>
-                <p>Question <span id="questionNum"></span></p>
-                <p class="fontWeight" id="questionId"></p><hr>
+                <div id="TimerId">
+                    <span>&#9203; 00</span><span>:</span><span id="timeCounter">10</span>
+                </div>
+                <div id="progBack" class="my-2">
+                    <div id="progFront">
+                    </div>
+                </div>
+                <div>
+                    <p>Question <span id="questionNum"></span></p>
+                    <p class="fontWeight" id="questionId"></p><hr>
+                </div>
             </div>
             <div id="formId">
                 <table>
@@ -93,7 +101,7 @@
                     <div id="level fontWeight"></div>
                     <!-- <div class="fontWeight">True Answers <span id="tA">12</span></div> -->
                     <!-- <div class="fontWeight">False Answers <span id="fA">1</span></div> -->
-                    <div class="fontWeight">Score <span id="score">1</span></div>
+                    <div class="fontWeight fs-1">Score <span id="score">1</span></div>
                 </div>
                 <div class="mt-5 buttons">
                    <form action=""><button class="btn bg-primary text-white px-4">Reset</button></form> 

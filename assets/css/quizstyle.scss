@@ -85,7 +85,8 @@ table {
 	display: flex;
 	justify-content: center;
 	tr {
-		border: 0.5px solid #000;
+		border: 3px solid #000000db;
+		// border-radius: 25px;
 		input {
 			display: none;
 		}

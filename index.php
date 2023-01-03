@@ -9,17 +9,17 @@
 <!-- ================== BEGIN core-css ================== -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link href="assets/css/default/app.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
 <!-- ================== END core-css ================== -->
 </head>
 <body>
 
-<div class="container d-flex justify-content-center mt-5 pt-5">
-    <div class="text-center mt-5">
-        <h1 class="text-white">Welcome</h1>
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore!</p>
-        <a href="assets/pages/Quiz.php" class="btn bg-success bg-opacity-50 fw-bold text-white mt-5">start the Quiz</a>
+<div class="contentContainer">
+    <div>
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore!</p>
+        <a href="assets/pages/Quiz.php">start the Quiz</a>
     </div>
 </div>
 

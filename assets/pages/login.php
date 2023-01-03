@@ -30,7 +30,7 @@
             <input type="text" class="form-control" name="name"><br>
         </div>
         <div>
-            <button type="submit" class="submitBtn" name="Submit">
+            <button type="submit" class="submitBtn">
                 Login
             </button>
         </div>

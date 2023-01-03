@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500&family=Slabo+27px&display=swap");
+body {
+  background: url(../images/quizzBg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Inconsolata", monospace;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+}
+.contentContainer div {
+  text-align: center;
+  margin-top: 140px;
+}
+.contentContainer div h1 {
+  color: #fff;
+  font-size: 150px;
+}
+.contentContainer div p {
+  color: #fff;
+}
+.contentContainer div a {
+  background-color: aliceblue;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgba(136, 31, 234, 0.8588235294);
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */
