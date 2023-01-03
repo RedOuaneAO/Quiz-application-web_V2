@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500&family=Slabo+27px&display=swap");
+body {
+  background: url(../images/quizzBg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Inconsolata", monospace;
+}
+
+.contentContainer {
+  margin-inline: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm {
+  text-align: center;
+  margin-top: 70px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.fontWeight {
+  font-weight: bold;
+}
+
+.submitBtn {
+  border: none;
+  padding: 5px;
+  width: 80px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgba(136, 31, 234, 0.8588235294);
+  margin-top: 50px;
+  color: #fff;
+}
+
+.backBtn {
+  text-decoration: none;
+  background-color: #0DCAF0;
+  padding: 7px;
+  border-radius: 5px;
+}/*# sourceMappingURL=loginstyle.css.map */
