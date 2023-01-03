@@ -9,9 +9,10 @@ let Answer_3=document.getElementById("option3");
 let Answer_4=document.getElementById("option4");
 let submitBtn =document.getElementById("submitId");
 let progressBar = document.getElementById("progFront");
-// const newQuestion=Questions.sort(()=>Math.random() - .5);
 let index =0;
 var Questions;
+var newQuestion;
+var counter=1;
 //==================================================Ajax request ============================
 function getQuestions(){
     let Request =new XMLHttpRequest();
@@ -19,7 +20,8 @@ function getQuestions(){
         if(this.readyState === 4 && this.status === 200){
             // console.log(this.responseText)  //for showing if we get data from json
             Questions = JSON.parse(this.responseText);  // to transfer json object to js object
-              // for showing if we transfer data from json to js
+            // for showing if we transfer data from json to js
+             newQuestion=Questions.sort(()=>Math.random() - .5);
             displayQuestions();
         }
     };
@@ -27,12 +29,8 @@ function getQuestions(){
     Request.send();
 }
 
-
-
-
 /*=========================================================== Display Questions Function ============================================*/
 let answerR= document.getElementsByName("options");
-let n=10;
 
 answerR.forEach(element=>{                            
     element.addEventListener("click",()=>{
@@ -46,16 +44,16 @@ function displayQuestions(){
         answerR.forEach(element=>{
             element.parentElement.parentElement.style.background="none";
         })
-        progressBar.style.width=n+"%";
-        n=n+10;
+        let cunt = ((counter*100)/Questions.length);
+        progressBar.style.width=cunt+"%";
         rulesForm.style.display="none";
         quizForm.style.display="block";
         QuestionNum.innerText=`${index+1}`;
-        Question.innerText= Questions[index]["question"];
-        Answer_1.innerText= Questions[index]["choice1"];
-        Answer_2.innerText= Questions[index]["choice2"];
-        Answer_3.innerText= Questions[index]["choice3"];
-        Answer_4.innerText= Questions[index]["choice4"];
+        Question.innerText= newQuestion[index]["question"];
+        Answer_1.innerText= newQuestion[index]["choice1"];
+        Answer_2.innerText= newQuestion[index]["choice2"];
+        Answer_3.innerText= newQuestion[index]["choice3"];
+        Answer_4.innerText= newQuestion[index]["choice4"];
         quizCountdown();
     }
 }
@@ -77,6 +75,7 @@ let score=0;
 
     submitBtn.addEventListener("click",()=>{
         index++;
+        counter++;
         console.log(index);
         submitBtn.style.visibility="hidden";
         if(index<Questions.length){
@@ -141,16 +140,16 @@ function Result(){
     rulesForm.style.display="none";
     quizForm.style.display="none";
     resultForm.style.display="block";
-    tASpan.innerText=rightAnswers;
-    fASpan.innerText=wrongAnswers;
+    // tASpan.innerText=rightAnswers;
+    // fASpan.innerText=wrongAnswers;
     totalScore.innerText=score;
     if(score<50){
-        level.innerText="bad";
+        level.innerText="bad better luck next time";
 
-    }else if(score>50 && score<70){
+    }else if(score>=50 && score<70){
         level.innerText="good";
 
-    }else if(score>70){
+    }else if(score>=70){
         level.innerText="perfect";
 
     }

@@ -24,12 +24,10 @@
             <h2 class="fontWeight">Login</h2>
             <hr>
         </div>
-        <form action="../classes/user.php" method="POST">
+        <form action="../classes/user.php" method="GET">
         <div>
             <label for="">Full Name</label><br>
-            <input type="text" class="form-control"><br>
-            <!-- <label for="">Email</label><br>
-            <input type="email" class="form-control" > -->
+            <input type="text" class="form-control" name="name"><br>
         </div>
         <div>
             <button type="submit" class="submitBtn" name="Submit">

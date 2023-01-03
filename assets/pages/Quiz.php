@@ -90,9 +90,9 @@
             <div>
                 <h3 class="fontWeight">Result</h3><hr>
                 <div>
-                    <div id="level"></div>
-                    <div class="fontWeight">True Answers <span id="tA">12</span></div>
-                    <div class="fontWeight">False Answers <span id="fA">1</span></div>
+                    <div id="level fontWeight"></div>
+                    <!-- <div class="fontWeight">True Answers <span id="tA">12</span></div> -->
+                    <!-- <div class="fontWeight">False Answers <span id="fA">1</span></div> -->
                     <div class="fontWeight">Score <span id="score">1</span></div>
                 </div>
                 <div class="mt-5 buttons">
